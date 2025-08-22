@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
-      - uses: actions/setup-go@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955
+      - uses: actions/setup-go@19bb51245e9c80abacb2e91cc42b33fa478b8639
         with:
           go-version-file: ./go.mod
       - name: install tools
@@ -25,9 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955
       - name: setup go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@19bb51245e9c80abacb2e91cc42b33fa478b8639
         with:
           go-version-file: ./go.mod
       - name: install tools
@@ -35,4 +35,4 @@ jobs:
       - name: run test
         run: make test
       - name: report coverage
-        uses: k1LoW/octocov-action@v1.4.0
+        uses: k1LoW/octocov-action@1ad702b3118b6a055c00b01db68ca0d9f6641dbc
